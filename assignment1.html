@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shapes</title>
+</head>
+<body>
+
+<script>
+  // 生成三角形的函数
+  function generateTriangle(rows) {
+    let triangle = '';
+    for (let i = 1; i <= rows; i++) {
+      // 添加空格以使三角形向右偏移
+      for (let j = 0; j < i - 1; j++) {
+        triangle += '&nbsp;';
+      }
+      // 添加星号
+      for (let k = 1; k <= rows - i + 1; k++) {
+        triangle += '*';
+      }
+      triangle += '<br>';
+    }
+    return triangle;
+  }
+
+  // 生成平行四边形的函数
+  function generateParallelogram(rows) {
+    let parallelogram = '';
+    for (let i = 1; i <= rows; i++) {
+      // 添加空格以使平行四边形向右偏移
+      for (let j = 1; j < i; j++) {
+        parallelogram += '&nbsp;';
+      }
+      // 添加星号
+      for (let k = 1; k <= rows; k++) {
+        parallelogram += '*';
+      }
+      parallelogram += '<br>';
+    }
+    return parallelogram;
+  }
+
+  // 生成菱形的函数
+  function generateDiamond(rows) {
+    let diamond = '';
+    // 上半部分
+    for (let i = 1; i <= rows; i++) {
+      // 添加空格以使菱形向右偏移
+      for (let j = 0; j < rows - i; j++) {
+        diamond += '&nbsp;';
+      }
+      // 添加星号
+      for (let k = 1; k <= i * 2 - 1; k++) {
+        diamond += '*';
+      }
+      diamond += '<br>';
+    }
+    // 下半部分
+    for (let i = rows - 1; i >= 1; i--) {
+      // 添加空格以使菱形向右偏移
+      for (let j = 0; j < rows - i; j++) {
+        diamond += '&nbsp;';
+      }
+      // 添加星号
+      for (let k = 1; k <= i * 2 - 1; k++) {
+        diamond += '*';
+      }
+      diamond += '<br>';
+    }
+    return diamond;
+  }
+
+  // 输出到页面
+  document.write('<h3>Triangle:</h3>');
+  document.write('<pre>' + generateTriangle(5) + '</pre>');
+
+  document.write('<h3>Parallelogram:</h3>');
+  document.write('<pre>' + generateParallelogram(5) + '</pre>');
+
+  document.write('<h3>Diamond:</h3>');
+  document.write('<pre>' + generateDiamond(5) + '</pre>');
+  //219970707辜靖耘
+</script>
+
+</body>
+<html>
