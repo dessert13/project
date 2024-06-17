@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+		<meta charset="utf-8">
+		<title>使用简单jQuery插件制作一个demo</title>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<!-- jQuery UI的Draggable插件。这个插件允许你使HTML元素可拖动 -->
+		<style>  
+		    #draggable {  
+		        width: 150px;  
+		        height: 150px;  
+		        padding: 0.5em;  
+		        background-color: #f4511e;  
+		        color: white;  
+		        text-align: center;  
+		        border-radius: 5px;  
+		}  
+		</style> 
+	</head>
+	<body>
+		<div id="draggable">拖动我</div>  
+		<script src="jquery-3.7.1.min.js"></script>  
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>  
+	<script>  
+		$(function() {  
+		    $("#draggable").draggable();  
+		});  
+	</script> 
+	</body>
+</html>
